@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./style/style.css">
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+    </head>
+
+    <body>
+        <!-- THIS IS THE NAVIGATION BAR -->
+        <div id="navContainer">
+            <div id="NavElement1">
+                <p class = "header"> SHAN WEI</p>
+            </div>
+            <div id="NavElement2">
+                <button class="buttonNav"><a href="#StylesTitle">STYLES</a></button>
+            </div>
+            <div id="NavElement3">
+                <button class="buttonNav"><a href="#TasteTitle">TASTE</a></button>
+            </div>
+            <div id="NavElement4">
+                <button class="buttonNav"><a href="#LocationTitle">LOCATION</a></button>
+            </div>
+        </div>
+
+
+        <!-- THIS ARE THE CONTENTS -->
+
+        <!-- THIS IS MY LANDING PAGE / COVER PAGE -->
+        <div id="LandingPage">
+            <h3 id="LandingTitleSmall">Data Visualization Project</h3>  
+            <h1 id="LandingTitleLarge">American Craft Beer Styles</h1>
+        </div>
+
+        <!-- THIS IS INTRO
+        PROJECT INTRODUCTION, DATASET, PROCESS, AND TABLE OF CONTENTS -->
+        <div id="Intro">
+            
+            <div id="IntroProject" class="threeInARow">
+                <h3 class = "standardParaTitle">Project Introduction</h3>
+                <p class = "standardParagraph">
+                    Beer can be divided into many styles, each style has a different history and characteristics. There are many different beer styles to choose from on the American craft beer market. So, what is the difference between different styles of beer? Which states are rich in craft beer？Let us take a look at these different styles of beer from different angles.</p>
+            </div>
+
+            <div id="IntroData" class="threeInARow">
+                <h3 class = "standardParaTitle">Data Source</h3>
+                <p class = "standardParagraph">
+                    This project is based off a data set found on <a href="https://www.kaggle.com/nickhould/craft-cans" target="_blank">Kaggle.com.</a>  This data set contains a list of 2,410 American craft beers and 510 American breweries. It was collected from CraftCans.com in January 2017. The data contains many variables. This visualization only uses variables related to the project theme, including: style, ABV, IBU, and state.</p>
+            </div>
+
+            <div id="IntroProcess" class="threeInARow">
+                <h3 class = "standardParaTitle">Process</h3>
+                <p class = "standardParagraph">
+                    The process starts with data analysis performed in R. The interactive visualization was created using D3.JS. Non-interactive visualizations are created in R using ggplot2 and exported to vector design software for visual optimization.
+                </p>
+            </div>
+
+            
+            <div id="TOCleft">
+                    <h3 class = "SectionTitle">Table of Content</h3>
+                    <p class = "standardParagraph">The visualization explores the beer made in the United States in 2017, with a focus of the different beer styles. The five most common beer styles appearing in the dataset are compared from two different perspectives: taste and geographic location.</p> 
+                </div>
+
+            <div class="TOCright"> 
+                <button class="buttonOne"><a href="#StylesTitle">PART 1: STYLES</a></button>
+                <p class = "standardParagraph">1 Visualization : How many different styles of craft beer are available in the market? What are the most common styles?</p>
+                <button class="buttonOne"><a href="#TasteTitle">PART 2: TASTE</a></button>
+                <p class = "standardParagraph">3 Visualizations :  What are the differences in the bitterness and alcohol content of different styles of beer?</p>
+                <button class="buttonOne"><a href="#LocationTitle">PART 3: LOCATION</a></button>
+                <p class = "standardParagraph">1 Visualization : Where are the most common types  of beer produced in USA?</p>
+            </div>
+
+        </div>
+
+        <!-- PART 1 : STYLES
+        VISULIZATION OF BEERS STYLES -->
+        <div id="part1Container">
+            <div id="StylesTitle">
+                <button class="partTag">Part 1: Styles</button>
+                <h3 class = "SectionTitle">In 2017, among the craft beer styles on the market, what is the most common style?</h3>
+            </div>
+            <div id="StylesImage">
+                <img src="Images/StylesTreeMap01.svg" alt="Beer Styles Tree Map">
+            </div>
+            <div id="StylesLegend">
+                <h4 class="LegendTitle">5 Most Common Styles</h4>
+                <ol class="LegendContentText">
+                    <li>American Pale Ale (APA)</li>
+                    <li>American IPA</li>
+                    <li>American Amber</li>
+                    <li>American Blonde Ale</li>
+                    <li>American Imperial IPA</li>
+                </ol>
+            </div>
+            <div id="StylesRationale">
+                <h3 class = "standardParaTitle">Design Rationale</h3>
+                <p class = "standardParagraph">
+                    The tree map shows the different beer styles in the market. The area of each rectangle represents the number of products of the style. The percentage of each style (the number of products of that style divided by the total number of products) were added to help readers perceive the quantitative differences between styles. The tree map was selected because it shows both the variety and the proportion. This align with my purpose, which is to show the diversity of beer styles and then identify some of the most common styles for later analysis.
+                </p>
+            </div>
+            <div id="StylesData">
+                <h3 class = "standardParaTitle">Data Analysis</h3>
+                <p class = "standardParagraph">
+                    All the entries of beer products was grouped by the styles. In order to make the Tree map more readable, some beer styles with infrequent entires were filtered out from this visualizations. The threshold is set to be 30 products. If a styles has less than 30 products on the market, then it is considered less relevant. Five beer styles with the most beer products were screened out during this process and used as a focused group in the following visualizations.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- PART 2 TAST-->
+        <!-- INTERACTIVE VISULIZATION -->
+        <div id="bodyContainer">
+
+            <!-- 2.1 Bitter -->
+            <!-- TITLE  -->
+            <div id="TasteTitle">
+                <button class="partTag">Part 2: Taste</button>
+                <h3 class = "SectionTitle">What are the differences in the bitterness of different styles of beer? </h3>
+            </div>
+            <!-- LEGENT TEXT -->
+            <div id="BitternessLegend">
+                <h4 class = "LegendTitle">International Bitterness Unit (IBU)</h4>
+                <p class = "LegendContentText">IBU is a standard for measuring the bitterness of beer. The IBU rating can be used as a general guide to taste, with a lower IBU indicating less bitterness, and vice versa. However, we must bear in mind that IBU is the only factor that determines the bitterness of beer taste. Malt and other flavors can mask the bitter taste in beer.</p> <br><br>
+                <p class = "LegendContentText">HOVER OVER DOTS TO SEE DETAIL DATA</p>
+            </div>
+            <div id="chart-container">
+                <!-- BUTTONS -->
+                <div class="TabBtnContainer">
+                    <button class = "buttonTwo" id="APA">APA</button>
+                    <button class = "buttonTwo" id="IPA">IPA</button>
+                    <button class = "buttonTwo" id="IMP">Imperial IPA</button>
+                    <button class = "buttonTwo" id="Blonde">Blonde Ale</button>
+                    <button class = "buttonTwo" id="Amber">Amber</button>
+                    <p class = "LegendContentText">CLICK TO VIEW DIFFERENT STYLES</p>
+                </div>
+                <!-- CHART -->
+                <div id="chartibu"></div>
+            </div>
+            <!-- TEXT -->
+            <div id="BitternessRationale">
+                <h3 class = "standardParaTitle">Design Rationale</h3>
+                <p class = "standardParagraph">
+                    In this line chart, the bitterness of the five most common beer styles is compared. The x-axis represents bitterness and the y-axis shows the number of products. On x-axis, the scale used is International Bitter Units (IBU); the greater the number, the bitter the beer. The value on the y-axis represents the number of products.  From this chart, you can see the product quantity distribution of each type of beer in different bitterness ranges. 
+                </p>
+                <p class = "standardParagraph">
+                    The audience can compare the bitterness distribution of five different styles of beer by clicking the "Style" button. Although color codes are not necessary in this visualization, using consistent color codes for these 5 beer styles throughout the project may improve reading.
+                </p>
+            </div>
+            <div id="BitternessData">
+                <h3 class = "standardParaTitle">Data Analysis</h3>
+                <p class = "standardParagraph">
+                    Since there are many types of beer, it is difficult to list them all. Therefore, I chose to focus on the five most common beer styles with the most products seen in the last visualization. IBU and product quantity are used as two variables to draw a single line chart. This visualization shows the number of products in different bitterness ranges.
+                </p> 
+            </div>
+
+
+            <!-- 2.2 ALC -->
+            <div id="TasteTitle2">
+                <h3 class = "SectionTitle">Strength of beer: Are there differences in the alcohol content of different styles of beer? </h3>
+            </div>
+            <!-- LEGENT TEXT -->
+            <div id="ALCLegend">
+                <h4 class = "LegendTitle">Alcohol by volume (ABV) </h4>
+                <p class = "LegendContentText">Alcohol by volume (ABV) is a standard measure of how much alcohol (ethanol) is contained in a given volume of an alcoholic beverage, it is expressed as a volume percent. It is defined as the number of millilitres of pure ethanol present in 100 ml.</p><br><br>
+                <p class = "LegendContentText">HOVER OVER DOTS TO SEE DETAIL DATA</p>
+            </div>
+            <!-- INTERACTIVE CHART -->
+            <div id="chart-container2">
+                <!-- BUTTONS -->
+                <div class="TabBtnContainer">
+                    <button class = "buttonTwo" id="APA2">APA</button>
+                    <button class = "buttonTwo" id="IPA2">IPA</button>
+                    <button class = "buttonTwo" id="IMP2">Imperial IPA</button>
+                    <button class = "buttonTwo" id="Blonde2">Blonde Ale</button>
+                    <button class = "buttonTwo" id="Amber2">Amber</button>
+                    <p class = "LegendContentText">CLICK TO VIEW DIFFERENT STYLES</p>
+                </div>
+                <div id="chartabv"></div>
+            </div>
+            <!-- TEXT -->
+            <div id="ALCRationale">
+                <h3 class = "standardParaTitle">Design Rationale</h3>
+                <p class = "standardParagraph">
+                    Similar to the line chart above, the five most common beer styles are compared. The x-axis represents the alcohol content, and the y-axis represents the number of products. On the x-axis, the scale used is alcohol by volume (ABV); the greater the number, the stronger the beer. In daily life, the most common form of ABV is percentage, where 2% alcohol content is equal to 0.02 ABV. From this chart, you can see the product quantity distribution of each beer in different alcohol strength ranges.
+                </p>
+            </div>
+            <div id="ALCData">
+                <h3 class = "standardParaTitle">Data Analysis</h3>
+                <p class = "standardParagraph">
+                    The data analysis process is similar to the previous bitterness distribution visualization. Here we look at the alcohol content instead if bitterness. The two variables are ABV and the number of products. 
+                </p>
+            </div>
+
+
+
+            
+            <div id="TasteTitle3">
+                <h3 class = "SectionTitle">Compare beer style across alcohol content and bitterness.</h3>
+            </div>
+
+            <!-- INTERACTIVE CHART -->
+            <div id="chart-container3">
+                <div id="chart"></div>
+            </div>
+            <div id="options">
+                <h2 class="axisLabels">Filter by Style</h2><br>
+
+                <label class="container" id = "filterAPA">APA
+                    <input type="checkbox" class="type--option" value="American Pale Ale (APA)" checked>  
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" id = "filterIPA">IPA
+                    <input type="checkbox" class="type--option" value="American IPA" checked>  
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" id = "filterIMP">Imperial IPA
+                    <input type="checkbox" class="type--option" value="American Double / Imperial IPA" checked>
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" id = "filterBlonde">Blonde Ale
+                    <input type="checkbox" class="type--option" value="American Blonde Ale" checked>
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" id = "filterAmber">Amber
+                    <input type="checkbox" class="type--option" value="American Amber / Red Ale" checked>
+                    <span class="checkmark"></span>
+                </label>
+                <br><br><br>
+                <p class = "LegendContentText">HOVER OVER DOTS TO SEE DETAIL DATA</p>
+                </div>
+
+            <!-- EXPLANATION -->
+            <div id="BNAExplanation">
+                <h3 class = "standardParaTitle">Design Rationale</h3>
+                <p class = "standardParagraph">
+                    This visualization uses a scatter plot to show the alcohol content and bitterness of the 5 styles of beer. The x-axis represents bitterness (IBU) and the y-axis represents alcohol content (ABV). The color coding here is used to distinguish different beer styles.The audience can also select the "beer style" to be displayed by clicking the filter.
+                </p>
+                <p class = "standardParagraph">
+                    Scatter plot can display two variables at the same time and reveal the relation between them. On the scatter plot, we can compare bitterness and alcohol content at the same time to see the relationship between the two variables. It can be seen that bitterness is positively correlated with alcohol content, and beer with higher alcohol content is usually more bitter. 
+                </p>
+            </div>
+    
+            <div id="BNAData" >
+                <h3 class = "standardParaTitle">Data Analysis</h3>
+                <p class = "standardParagraph">
+                    Each point represents a beer product, a total of 667 different beer products are drawn.. Unlike the line chart above, in this scatter chart, the audience can see each beer product and carefully review the relevant data.</p>
+            </div>
+
+        </div>
+        <script src="./scriptIbu.js"></script>
+        <script src="./scriptAbv.js"></script>
+        <script src="./spscript.js"></script>
+
+        <!-- PART 3 : LOCATION
+            VISULIZATION OF BEERS STYLES -->
+        <div id="part3Container">
+            <div id="LocationTitle">
+                <button class="partTag">Part 3: Location</button>
+                <h3 class = "SectionTitle">Where are the five most common beer styles produced in the United States?</h3>
+            </div>
+            <div id="LocationImage">
+                <img src="Images/Location01.svg" alt="Beer Bitterness Alcohol Scatter Plot">
+            </div>
+            <div id="LocationExplain" class="threeInARow">
+                <h3 class = "standardParaTitle">Explanation</h3>
+                <p class = "standardParagraph">
+                    Above is a grouped bar chart with a circular layout. The data is divided into five groups based on five beer styles, showing the number of beer products produced in different states. From the figure, we can see that Colorado and California produce more beer. Especially Colorado, it is the largest producer of the four styles.
+                </p>
+            </div>
+            <div id="LocationRationale" class="threeInARow">
+                <h3 class = "standardParaTitle">Design Rationale</h3>
+                <p class = "standardParagraph">
+                    Colors are used to encode different styles. In group, the bars are arranged in descending order. In this way, we can see which states produce more. A advantage of circular layout is efficient use of space. One disadvantage of the circular layout is that the bar data is more difficult to read. It is necessary to use more prominent auxiliary lines, thus, the circular grids are drawn over the bars.
+                </p>
+            </div>
+                <div id="LocationData" class="threeInARow">
+                <h3 class = "standardParaTitle">Data Analysis</h3>
+                <p class = "standardParagraph">
+                    When processing the data, because the winery and the location information of the winery are in another table. So I first joined the data in the two tables. Then, in order to achieve a more readable visualization, I streamlined the data and removed some states with smaller production volumes (less than five). 
+                </p>
+            </div>
+
+            <!-- THIS IS 
+            THE ENDING PAGE -->
+            <div id = "endingPage">
+                <h2>Thank you for watching</h2>
+                <button class="buttonOne"><a href="#NavElement1">BACK TO TOP</a></button>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- THIS IS THE FOOTER -->
+        <div id="footerContainer">
+
+            <div id = "footerLeft">
+                <p class = "LegendContentText">Designed by Shan Wei</p>
+                <p class = "LegendContentText">wei.sha@northeastern.edu</p>
+                <p class = "LegendContentText">2020. 12. 16</p>
+            </div>
+
+            <div id = "footerCenter">
+                <p class = "LegendContentText">ARTG 5330 Visual Technology 1</p>
+                <p class = "LegendContentText">Fall 2020, Final Project</p>
+                <p class = "LegendContentText">Instructed by Steven Braun</p>
+            </div>
+
+            <div id = "footerRight">
+                <p class = "LegendContentText">Northeastern University</p>
+                <p class = "LegendContentText">College of Arts, Media and Design</p>
+                <p class = "LegendContentText">Boston, MA, UAS</p>
+            </div>
+
+        </div>
+
+
+    
+    </body>
+
+</html>

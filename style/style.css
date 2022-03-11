@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+
+
+/* Here is my navigation bar  */
+
+#navContainer {
+  width: 100vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  font-size: 16px;
+  background-color: #3F24B8;
+  color:white;
+}
+
+.header {
+  color:white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 2rem 4rem;
+}
+#NavElement1 {
+  grid-column-start:1;
+  grid-column-end:4;
+  grid-template-rows: auto;
+}
+#NavElement2 {
+  grid-column-start:4;
+  grid-column-end:5;
+  grid-template-rows: auto;
+}
+#NavElement3 {
+  grid-column-start:5;
+  grid-column-end:6;
+  grid-template-rows: auto;
+}
+#NavElement4 {
+  grid-column-start:6;
+  grid-column-end:7;
+  grid-template-rows: auto;
+  text-align: left;
+}
+
+/* Here is my Landing page */
+
+#LandingPage {
+  width:100vw;
+  height:90vh;
+  background-color: #6236FF;
+  padding: 20vh 15vw;
+  color:white;
+  text-align: center;
+}
+#LandingTitleSmall{
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 0.1
+}
+#LandingTitleLarge{
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+/* Here is my intro section */
+#Intro {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  font-size: 16px;
+}
+.threeInARow{
+    padding: 14vh 6vw;
+    text-align: center;
+}
+#IntroProject {
+    grid-column-start:1;
+    grid-column-end:3;
+    grid-template-rows: auto;
+    background-color: #080453;
+}
+#IntroData {
+    grid-column-start:3;
+    grid-column-end:5;
+    background-color: #1E1471;
+}
+#IntroProcess {
+    grid-column-start:5;
+    grid-column-end:7;
+    grid-template-rows: auto;
+    background-color: #080453;
+}
+.LegendTitle{
+    color:white;
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+
+/* Here is the "Table of Content" of the project section */
+#TOCleft{
+    grid-column-start:1;
+    grid-column-end:3;
+    grid-template-rows: auto;
+    background-color: #2F2392;
+    padding: 12vh 8vw;
+    padding-right: 10vw;
+}
+.TOCright{
+    grid-column-start:3;
+    grid-column-end:7;
+    grid-template-rows: auto;
+    background-color: #2F2392;
+    padding: 20vh 10vw 12vh;
+}
+
+.TOCright p{
+    padding-bottom: 6rem;
+
+}
+
+/* Here is Visualization Part 1 */
+#part1Container {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  font-size: 16px;
+  background-color: #030127;
+}
+#StylesTitle {
+  grid-column-start:1;
+  grid-column-end:7;
+  grid-template-rows: auto;
+  padding: 14vh 8vw;
+  padding-bottom:0;
+}
+#StylesImage {
+  grid-column-start:1;
+  grid-column-end:5;
+  grid-template-rows: auto;
+  padding: 12vh 8vw;
+  padding-top: 0;
+}
+#StylesImage img {
+  width:60vw;
+}
+#StylesLegend{
+  grid-column-start:5;
+  grid-column-end:7;
+  grid-template-rows: auto;
+  color:white;
+  padding-left: 0;
+  padding-right: 4vw;
+  padding-top:25vh;
+  padding-left: 10vw;
+}
+#StylesRationale{
+  grid-column-start:1;
+  grid-column-end:4;
+  grid-template-rows: auto;
+  background-color: #080533;
+  padding: 12vh 8vw;
+  padding-right: 4vw;
+}
+#StylesData{
+  grid-column-start:4;
+  grid-column-end:7;
+  grid-template-rows: auto;
+  background-color: #080533;
+  padding: 12vh 8vw;
+  padding-left: 4vw;
+}
+
+
+
+/* Body Contents Grid Template  */
+#bodyContainer {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto;
+  font-size: 16px;
+  background-color: #120041;
+}
+
+#TasteTitle3 {
+  grid-column-start:1;
+  grid-column-end:9;
+  grid-template-rows: auto;
+  background-color: #120041;
+  padding: 14vh 8vw;
+  padding-bottom:0;
+}
+
+
+/* Here is Visualization Part 2 */
+/* 2.1 Bitter */
+#TasteTitle {
+  grid-column-start:1;
+  grid-column-end:-1;
+  grid-template-rows: auto;
+  background-color: #120041;
+  padding: 14vh 8vw;
+  padding-bottom:0;
+}
+.TabBtnContainer{
+  margin-left: 10vw;
+}
+/* Line chart - IBU */
+#BitternessLegend{
+  grid-column-start:1;
+  grid-column-end:3;
+  padding-right: 4vw;
+  padding-left: 8vw;
+  padding-top:25vh;
+  padding-bottom: 1em;
+}
+#chart-container {
+  height: 100vh;
+  grid-column-start:3;
+  grid-column-end:-1;
+  grid-template-rows: auto;
+}
+#chartibu {
+  width: 98%;
+  height: 90vh;
+  position: relative;
+}
+#BitternessRationale{
+  grid-column-start:1;
+  grid-column-end:6;
+  grid-template-rows: auto;
+  background-color: #170A59;
+  padding: 12vh 24vw 12vh 8vw;
+  padding-right: 4vw;
+}
+#BitternessData{
+  grid-column-start:6;
+  grid-column-end:-1;
+  grid-template-rows: auto;
+  background-color: #170A59;
+  padding: 12vh 8vw;
+  padding-left: 4vw;
+}
+
+/* 2.2 Alc */
+#TasteTitle2 {
+  grid-column-start:1;
+  grid-column-end:-1;
+  grid-template-rows: auto;
+  background-color: #120041;
+  padding: 14vh 8vw;
+  padding-bottom:0;
+}
+#ALCLegend{
+  grid-column-start:1;
+  grid-column-end:3;
+  grid-template-rows: auto;
+  padding-right: 4vw;
+  padding-left: 8vw;
+  padding-top:30vh;
+  padding-bottom: 1em;
+}
+#chart-container2 {
+  height: 100vh;
+  grid-column-start:3;
+  grid-column-end:-1;
+  grid-template-rows: auto;
+}
+#chartabv {
+  width: 98%;
+  height: 90vh;
+  position: relative;
+}
+#ALCRationale{
+  grid-column-start:1;
+  grid-column-end:6;
+  grid-template-rows: auto;
+  background-color: #140d4e;
+  padding: 12vh 8vw;
+  padding-right: 4vw;
+}
+#ALCData{
+  grid-column-start:6;
+  grid-column-end:-1;
+  grid-template-rows: auto;
+  background-color: #140d4e;
+  padding: 12vh 8vw;
+  padding-left: 4vw;
+}
+
+/* 2.3 Bitter & Alc */
+/* chart Scatter plot */
+#chart-container3 {
+  height: 100vh;
+  grid-column-start:1;
+  grid-column-end:-2;
+  grid-template-rows: auto;
+}
+#chart {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#options{
+  grid-column-start:8;
+  grid-column-end:-1;
+  margin-right: 4vw;
+  grid-template-rows: auto;
+  color:white;
+  font-weight: 100;
+  padding-top: 6rem;
+}
+
+
+/* Explanation paragraph*/
+#BNAExplanation {
+  grid-column-start:1;
+  grid-column-end:7;
+  padding: 12vh 8vw 12vh 8vw;
+}
+
+#BNAData {
+  grid-column-start:7;
+  grid-column-end:-1;
+  padding: 12vh 8vw;
+    padding-left: 4vw;
+}
+
+
+
+
+/* shared chart elements */
+.axisLabels {
+  font-size: 1.2rem;
+  font-weight: 100;
+  color:white;
+}
+.axis {
+  font-size: 0.8rem;
+  font-weight: 100;
+  color:white;
+}
+.tooltip {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  visibility: hidden;
+  background-color:rgba(0, 0, 24, 0.7);
+  padding: 1rem;
+  pointer-events: none;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 300;
+  color:white;
+}
+
+/* Here is Visualization Part 3 */
+/* Here is Visualization Part 3 */
+
+#part3Container {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  font-size: 16px;
+}
+
+#LocationTitle {
+  grid-column-start:1;
+  grid-column-end:7;
+  grid-template-rows: auto;
+  background-color: #120e5d;
+  padding: 14vh 8vw;
+  padding-bottom:0;
+}
+#LocationImage{
+      grid-column-start:1;
+      grid-column-end:7;
+      grid-template-rows: auto;
+      background-color: #120e5d;
+      padding: 12vh 8vw;
+      padding-top: 0;
+}
+#LocationImage img {
+      width:70vw;
+}
+#LocationExplain {
+  grid-column-start:1;
+  grid-column-end:3;
+  grid-template-rows: auto;
+  background-color: #080453;
+}
+
+#LocationRationale{
+  grid-column-start:3;
+  grid-column-end:5;
+  background-color: #170f5c;
+}
+#LocationData{
+  grid-column-start:5;
+  grid-column-end:7;
+  grid-template-rows: auto;
+  background-color: #080453;
+}
+
+
+
+
+/* Here is the Ending Page*/
+#endingPage{
+  grid-column-start:1;
+  grid-column-end:7;
+  grid-template-rows: auto;
+  background-color: #6236FF;
+  padding: 20vh 10vw;
+  text-align: center;
+}
+
+#endingPage h2{
+  color:white;
+  font-size: 4rem;
+  line-height: 0.4;
+}
+
+
+
+
+
+/* Here is the Footer*/
+
+#footerContainer {
+  width: 100vw;
+  height: 30vh;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: auto;
+  font-size: 16px;
+  background-color: #3822A4;
+  text-align: center;
+}
+
+#footerLeft {
+  grid-column-start:2;
+  grid-column-end:3;
+  margin-top: 10vh;
+}
+#footerCenter {
+  grid-column-start:4;
+  grid-column-end:5;
+  margin-top: 10vh;
+}
+#footerRight {
+  grid-column-start:6;
+  grid-column-end:7;
+  margin-top: 10vh;
+}
+
+
+
+
+
+/* Here are the Font Style Guides   */
+
+.LegendContentText{
+  color:white;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.header {
+  color:white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 2rem 4rem;
+}
+
+.SectionTitle{
+  color:white;
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
+.standardParagraph{
+  color:white;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.standardParaTitle{
+  color:white;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.partTag{
+  font-size: 1.2rem;
+  font-weight: 300;
+  color:white;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  background-color:  hsla(0, 0%, 100%, 0.2); 
+  border: none;
+  text-align: center;
+  outline: none;
+}
+
+
+/* 
+Interction Style Guides
+*/
+
+/* Navigation buttons   */
+.buttonNav {
+  font-size: 1rem;
+  text-align: center;
+  width:8rem;
+  height: 3rem;
+  background-color: #3822A4;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  box-shadow: inset 0 0 0 0 #1CEFC0;
+  transition: ease-out 0.3s;
+  margin: 2rem 4rem;
+}
+.buttonNav > a:link, .buttonNav > a:visited, .buttonNav > a:hover {
+  color:white;
+  text-decoration: none;
+}
+
+.buttonNav:hover {
+  box-shadow: inset 15rem 0 0 0  #1CEFC0;
+  cursor: pointer;
+  color:  #6236FF;
+}
+
+/* Table of Content buttons   */
+.buttonOne {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  width:14rem;
+  height: 3rem;
+  opacity: 80;
+  background-color: #655CFE;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  box-shadow: inset 0 0 0 0 #1CEFC0;
+  transition: ease-out 0.3s;
+}
+.buttonOne > a:link, .buttonOne > a:visited {
+  color:white;
+  text-decoration: none;
+}
+.buttonOne:hover {
+  box-shadow: inset 15rem 0 0 0  #1CEFC0;
+  cursor: pointer;
+  color:  #6236FF;
+}
+
+
+/* LINE CHART- STYLES UPDATE BTNS   */
+.buttonTwo {
+  font-size: 1rem;
+  text-align: center;
+  width:7rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border: 0.75px solid black;
+  border-color: rgba(255, 255, 255, 0.4);
+  color:  white;
+  border-radius: 6px;
+  outline: none;
+  box-shadow: inset 0 0 0 0 #1CEFC0;
+  transition: ease-out 0.3s;
+  margin: 2vh 1vw 0vh 0vw;
+}
+.buttonTwo:hover {
+  box-shadow: inset 10rem 0 0 0  #1CEFC0;
+  cursor: pointer;
+  color:  white;
+}
+#APA{
+  box-shadow: inset 0 0 0 0 #A74DFF;
+}
+#APA:hover{
+  box-shadow: inset 10rem 0 0 0  #A74DFF;
+  border:none;
+}
+#APA2{
+  box-shadow: inset 0 0 0 0 #A74DFF;
+}
+#APA2:hover{
+  box-shadow: inset 10rem 0 0 0  #A74DFF;
+  border:none;
+}
+#IPA{
+  box-shadow: inset 0 0 0 0 #15E6FF;
+}
+#IPA:hover{
+  box-shadow: inset 10rem 0 0 0  #15E6FF;
+  border:none;
+}
+#IPA2{
+  box-shadow: inset 0 0 0 0 #15E6FF;
+}
+#IPA2:hover{
+  box-shadow: inset 10rem 0 0 0  #15E6FF;
+  border:none;
+}
+#IMP{
+  box-shadow: inset 0 0 0 0 #47E29A;
+}
+#IMP:hover{
+  box-shadow: inset 10rem 0 0 0  #47E29A;
+  border:none;
+}
+#IMP2{
+  box-shadow: inset 0 0 0 0 #47E29A;
+}
+#IMP2:hover{
+  box-shadow: inset 10rem 0 0 0  #47E29A;
+  border:none;
+}
+#Blonde{
+  box-shadow: inset 0 0 0 0 #F7B500;
+}
+#Blonde:hover{
+  box-shadow: inset 10rem 0 0 0  #F7B500;
+  border:none;
+}
+#Blonde2{
+  box-shadow: inset 0 0 0 0 #F7B500;
+}
+#Blonde2:hover{
+  box-shadow: inset 10rem 0 0 0  #F7B500;
+  border:none;
+}
+#Amber{
+  box-shadow: inset 0 0 0 0 #FF528B;
+}
+#Amber:hover{
+  box-shadow: inset 10rem 0 0 0  #FF528B;
+  border:none;
+}
+#Amber2{
+  box-shadow: inset 0 0 0 0 #FF528B;
+}
+#Amber2:hover{
+  box-shadow: inset 10rem 0 0 0  #FF528B;
+  border:none;
+}
+
+
+/* LINK TEXT HOVER   */
+.standardParagraph > a:link, .standardParagraph > a:visited {
+  color:#ffffff;
+  text-decoration: none;
+  font-weight: 300;
+}
+.standardParagraph > a:hover {
+text-decoration: underline;
+color:#1CEFC0;
+cursor: pointer;
+font-weight: 300;
+}
+
+
+/* FILTER CHECKBOXES   */
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 21px;
+  width: 21px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* When the checkbox is checked, add a blue background */
+#filterAPA input:checked ~ .checkmark {
+  background-color: #A74DFF;
+}
+#filterIPA input:checked ~ .checkmark {
+  background-color: #15E6FF;
+}
+#filterIMP input:checked ~ .checkmark {
+  background-color: #47E29A;
+}
+#filterBlonde input:checked ~ .checkmark {
+  background-color: #F7B500;
+}
+#filterAmber input:checked ~ .checkmark {
+  background-color: #FF528B;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 7px;
+  top: 2.5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
